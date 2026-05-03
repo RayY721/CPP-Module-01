@@ -3,7 +3,7 @@ NAME = harlFilter
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp 
+SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp Zombie.hpp
+%.o: %.cpp Harl.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
