@@ -26,7 +26,7 @@ void Replace::process( void )
 	}
 
 	std::ofstream outFile((this->_filename + ".replace").c_str());
-	if (!inFile.is_open())
+	if (!outFile.is_open())
 	{
 		std::cout << "Error: Could not open output file " << this->_filename << std::endl;
 		return ;
